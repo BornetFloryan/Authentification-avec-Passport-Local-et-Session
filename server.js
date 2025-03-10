@@ -27,7 +27,7 @@ models.sequelize.sync().then(() => {
 
 // Passport
 app.use(session({
-    secret: process.env.SECRET || 'secret',
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
     cookie: { secure: false }
