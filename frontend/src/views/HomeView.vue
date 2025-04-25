@@ -33,7 +33,7 @@ export default {
         await axios.post('http://localhost:3000/signout', {}, {withCredentials: true});
         this.isAuthenticated = false;
         this.user = {};
-        this.$router.push('/');
+        this.$router.push('/signin');
       } catch (error) {
         console.error('Error signing out:', error);
       }

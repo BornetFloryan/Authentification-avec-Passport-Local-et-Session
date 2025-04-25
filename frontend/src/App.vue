@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Mini-projet 1 - Authentification avec Passport-Local et Session : Floryan BORNET, Corentin BRENDLE</h1>
     <nav v-if="showNav">
       <router-link to="/signin">Sign In</router-link>
       <router-link to="/signup">Sign Up</router-link>
@@ -16,7 +17,9 @@ export default {
     };
   },
   created() {
-    this.showNav = this.$route.name !== 'home';
+    if (this.$route && this.$route.name) {
+      this.showNav = this.$route.name !== 'home';
+    }
 
     this.$router.beforeEach((to, from, next) => {
       this.showNav = to.name !== 'home';
