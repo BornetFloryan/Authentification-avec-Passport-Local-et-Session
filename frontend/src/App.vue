@@ -2,8 +2,8 @@
   <div id="app">
     <h1>Mini-projet 1 - Authentification avec Passport-Local et Session : Floryan BORNET, Corentin BRENDLE</h1>
     <nav v-if="showNav">
-      <router-link to="/signin">Sign In</router-link>
-      <router-link to="/signup">Sign Up</router-link>
+      <router-link to="/signin">Se connecter</router-link>
+      <router-link to="/signup">S'inscrire</router-link>
     </nav>
     <router-view/>
   </div>
@@ -46,6 +46,12 @@ nav a {
   font-weight: bold;
   color: #2c3e50;
   padding: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #42b983;
 }
 
 nav a.router-link-exact-active {
