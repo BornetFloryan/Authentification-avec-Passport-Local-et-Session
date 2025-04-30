@@ -52,6 +52,28 @@ Authentification-avec-Passport-Local-et-Session/
 - **Node.js** (v14 ou supérieur)
 - **npm** ou **yarn**
 - **PostgreSQL** (ou MySQL)
+- 
+### Configuration du fichier `.env`
+
+Créez un fichier `.env` dans le dossier `backend/` avec les variables suivantes :
+
+```env
+# Configuration de la base de données
+DB_USERNAME=your_postgres_username
+DB_PASSWORD=your_postgres_password
+DB_DATABASE=your_development_database
+DB_DATABASE_TEST=your_test_database
+DB_DATABASE_PROD=your_production_database
+DB_HOST=localhost
+DB_PORT=5432
+
+# Environnement de l'application
+NODE_ENV=development
+
+# Clé secrète pour les sessions
+SECRET=your_secret_key
+```
+
 
 ### Étapes
 1. **Cloner le dépôt GitHub** :
